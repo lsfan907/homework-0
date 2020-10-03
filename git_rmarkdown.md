@@ -1,6 +1,10 @@
 edx\_data\_science\_productivity
 ================
 
+``` r
+library(tidyverse)
+```
+
     ## -- Attaching packages ----------------------- tidyverse 1.3.0 --
 
     ## v ggplot2 3.2.1     v purrr   0.3.3
@@ -12,7 +16,17 @@ edx\_data\_science\_productivity
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
+``` r
+library(dslabs)
+```
+
     ## Warning: package 'dslabs' was built under R version 3.6.3
+
+``` r
+data(murders)
+murders %>% ggplot(aes(state, total)) +
+  geom_bar(stat = "identity")
+```
 
 ![](git_rmarkdown_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
